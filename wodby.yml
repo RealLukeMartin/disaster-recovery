@@ -5,5 +5,5 @@ pipeline:
    directory: $APP_ROOT
 - name: Build site
   type: command
-  command: drush si disaster_recovery --config-dir=/var/www/html/config/sync  --db-url=mysql://drupal:drupal@mariadb/drupal  --root=/var/www/html/web -y
-  directoy: $APP_ROOT
+  command: drush si disaster_recovery --config-dir=/var/www/html/config/sync  --db-url=mysql://drupal:drupal@mariadb/drupal -y
+  directoy: $HTTP_ROOT
