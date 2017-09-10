@@ -3,3 +3,7 @@ pipeline:
    type: command
    command: composer install --no-interaction --optimize-autoloader
    directory: $APP_ROOT
+- name: Build site
+  type: command
+  command: drush si disaster_recovery --config-dir=/var/www/html/config/sync  --db-url=mysql://drupal:drupal@mariadb/drupal  --root=/var/www/html/web -y
+  directoy: $APP_ROOT
